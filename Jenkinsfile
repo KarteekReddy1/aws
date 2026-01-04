@@ -66,7 +66,7 @@ pipeline {
                 ]) {
                     dir('terraform') {
                         sh '''
-                          terraform init -input=false -backend-config=backend-${ENV}.hcl -reconfigure
+                          terraform init -input=false -backend-config=backend-${ENV}.hcl
                         '''
                     }
                 }
