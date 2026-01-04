@@ -4,16 +4,16 @@
 
 
 
-# #s3 bucket block
-# terraform {
-#   backend "s3" {
-#     bucket         = "my2-terraform2-state2-${var.env}"
-#     key            = "eks/dev/terraform.tfstate"
-#     region         = "us-east-1"
-#     dynamodb_table = "terraform-lock-${var.env}"
-#     encrypt        = true
-#   }
-# }
+#s3 bucket block
+terraform {
+  backend "s3" {
+    bucket         = "my2-terraform2-state2-${var.env}"
+    key            = "eks/dev/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-lock-${var.env}"
+    encrypt        = true
+  }
+}
 
 #provider block
 
